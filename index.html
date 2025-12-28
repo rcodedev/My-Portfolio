@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.ico">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav class="navbar">
+  <h2 class="logo">Rahul</h2>
+  <ul class="nav-links">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Home -->
+ <section id="home" class="hero">
+  <div class="hero-content">
+    <h1>
+      Hi, I'm <span class="highlight">Rahul</span> 👋
+    </h1>
+
+    <p class="hero-subtitle">
+      Computer Science Engineer • Full Stack Developer
+    </p>
+
+    <p class="hero-description">
+      I build scalable, user-friendly web applications and enjoy turning ideas into
+      real-world solutions using modern technologies.
+    </p>
+
+   <div class="buttons">
+  <a href="#projects" class="btn primary-btn">View Projects</a>
+
+  <a href="https://drive.google.com/file/d/1wRYbZ2_ZEI0ycEfPhqCyhpblOXX7TUZj/view?usp=drive_link"
+     class="btn outline-btn" target="_blank">
+    Download Resume
+  </a>
+</div>
+
+  </div>
+</section>
+
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+     Motivated Computer Science Engineering student with strong foundations in Java and full-stack web development. 
+Seeking an entry-level software developer role where I can apply my problem-solving skills, build scalable applications, 
+and grow through continuous learning and teamwork.
+
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">Java</div>
+      <div class="card">JavaScript</div>
+      <div class="card">HTML & CSS</div>
+      <div class="card">Spring Boot</div>
+      <div class="card">MySQL</div>
+      <div class="card">GitHub</div>
+    </div>
+  </section>
+
+ <section id="projects" class="projects reveal">
+  <h2>Projects</h2>
+  <p class="projects-subtitle">Some of the projects I’ve built using modern technologies</p>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <h3>Employee Management System</h3>
+      <ul>
+        <li>Developed a full-stack system using Java, Spring Boot, and MySQL</li>
+        <li>Implemented RESTful APIs with role-based authentication</li>
+        <li>Optimized data handling with search, filtering, and pagination</li>
+        <li>Designed a responsive UI using HTML, CSS, and JavaScript</li>
+      </ul>
+      <span class="tech">Java • Spring Boot • MySQL</span>
+    </div>
+
+    <div class="project-card">
+      <h3>User Authentication System</h3>
+      <ul>
+        <li>Built secure Signup, Login, and Home pages</li>
+        <li>Implemented client-side form validation</li>
+        <li>Designed a clean, mobile-responsive user interface</li>
+      </ul>
+      <span class="tech">HTML • CSS • JavaScript</span>
+    </div>
+
+    <div class="project-card">
+      <h3>Smart Traffic Monitoring System</h3>
+      <ul>
+        <li>Developing an IoT-based real-time traffic monitoring solution</li>
+        <li>Integrated CNN models for incident detection and prediction</li>
+        <li>Implemented blockchain-based secure data logging</li>
+      </ul>
+      <span class="tech">IoT • AI • Blockchain</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="contact reveal">
+  <h2>Contact Me</h2>
+  <p class="contact-subtitle">
+    Have a question, feedback, or opportunity?  
+    Feel free to send me a message — I’ll get back to you as soon as possible.
+  </p>
+
+  <div class="contact-wrapper">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <div class="info-item">
+        <span class="icon">📧</span>
+        <div>
+         <a href="mailto:therahulk09@gmail.com"> <h4>Email</h4></a>
+       
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="icon">💻</span>
+        <div>
+          <a href="https://github.com/rcodedev"><h4>GitHub</h4></a>
+         
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="icon">🔗</span>
+        <div>
+        <a href="https://www.linkedin.com/in/rahul-k-213ab4329" target="_blank"> <h4>LinkedIn</h4></a> 
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+   <form class="contact-form" id="contactForm">
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Your Name" required />
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Your Email" required />
+  </div>
+
+  <div class="form-group">
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  </div>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("JyDv2QeSV8l_PvEIN");
+  })();
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_5dptr1p",
+      "template_5uvgi3l",
+      this
+    ).then(
+      function () {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      },
+      function (error) {
+        alert("Failed to send message. Try again.");
+      }
+    );
+  });
+</script>
+
+
+  </div>
+</section>
+
+
+
+  <footer>
+    <p>© 2025 Rahul. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
